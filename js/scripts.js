@@ -16,6 +16,7 @@ $(document).ready(function () {
                 path1 = $('#txtPath1').val(),
                 path2 = $('#txtPath2').val(),
                 headlinePadrao = $('#txtHeadlinePadrao').val(),
+                usarHeadlinePadraoTodosAnuncios = $('[name=rdbHeadlinePadrao]:checked').val() == 'S',
                 headline1 = $('#txtVariacaoUm').val(),
                 descricao1 = $('#txtDescricaoUm').val().tratarVirgulas(),
                 headline2 = $('#txtVariacaoDois').val(),
@@ -26,7 +27,7 @@ $(document).ready(function () {
             planilhaGA.montarConteudoPlanilha(gapc.grupoAnuncios, cliente, campanha, '0.30');
 
             planilhaA.montarConteudoPlanilha(gapc.grupoAnuncios,
-                cliente, campanha, url, path1, path2, headlinePadrao,
+                cliente, campanha, url, path1, path2, headlinePadrao, usarHeadlinePadraoTodosAnuncios,
                 headline1, descricao1, headline2, descricao2, headline3, descricao3
             );
 

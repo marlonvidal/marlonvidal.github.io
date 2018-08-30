@@ -27,27 +27,31 @@ ConteudoPlanilhaAnuncios.prototype.montarAnuncio = function (campanha, grupoAnun
 }
 
 ConteudoPlanilhaAnuncios.prototype.montarConteudoPlanilha = function (gapc,
-    cliente, campanha, url, path1, path2, headlinePadrao, headline1, descricao1,
-    headline2, descricao2, headline3, descricao3) {
+    cliente, campanha, url, path1, path2, headlinePadrao, usarHeadlinePadraoTodosAnuncios,
+    headline1, descricao1, headline2, descricao2, headline3, descricao3) {
     var conteudo = '';
     var totalItens = 0;
 
     for (var grupoAnuncio in gapc) {
         var headline = '';
 
-        if (gapc[grupoAnuncio].nome.length > 30)
+        if (usarHeadlinePadraoTodosAnuncios) {
             headline = headlinePadrao;
-        else
-            headline = '{KeyWord:' + gapc[grupoAnuncio].nome + '}';
+        } else {
+            if (gapc[grupoAnuncio].nome.length > 30)
+                headline = headlinePadrao;
+            else
+                headline = '{KeyWord:' + gapc[grupoAnuncio].nome + '}';
+        }
 
-        conteudo += this.montarAnuncio(campanha, gapc[grupoAnuncio].nome, 
+        conteudo += this.montarAnuncio(campanha, gapc[grupoAnuncio].nome,
             headline, headline1, descricao1, path1, path2, url, this.separador);
 
-        conteudo += this.montarAnuncio(campanha, gapc[grupoAnuncio].nome, 
+        conteudo += this.montarAnuncio(campanha, gapc[grupoAnuncio].nome,
             headline, headline2, descricao2, path1, path2, url, this.separador);
 
-        conteudo += this.montarAnuncio(campanha, gapc[grupoAnuncio].nome, 
-            headline, headline3, descricao3, path1, path2, url, this.separador);            
+        conteudo += this.montarAnuncio(campanha, gapc[grupoAnuncio].nome,
+            headline, headline3, descricao3, path1, path2, url, this.separador);
 
         totalItens += 3;
     }
