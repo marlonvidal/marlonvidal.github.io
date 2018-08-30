@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="robots" content="noindex" />
+
+  <title>Gerador Adwords - Lambda Marketing Digital</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Gerador de Campanhas Adwords</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Informações</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Resultado</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <form class="row">
+        <div class="col-lg-6 mx-auto">
+          <h2>Insira as informações</h2>
+          <div class="form-group">
+            <label for="txtNomeCliente">Nome do Cliente</label>
+            <input type="text" required class="form-control" id="txtNomeCliente" placeholder="Nome do Cliente">
+          </div>
+          <div class="form-group">
+            <label for="txtNomeCampanha">Nome da Campanha</label>
+            <input type="text" required class="form-control" id="txtNomeCampanha" placeholder="Nome da Campanha">
+          </div>
+          <div class="form-group">
+            <label for="txtPaginaDestino">Página de Destino</label>
+            <input type="text" required class="form-control" id="txtPaginaDestino" placeholder="Página de Destino">
+          </div>
+          <div class="form-group">
+            <label>URL Exibição</label>
+          </div>
+          <div class="form-inline">
+            <input type="text" required maxlength="15" class="form-control" id="txtPath1" placeholder="Path 1"> /
+            <input type="text" required maxlength="15" class="form-control" id="txtPath2" placeholder="Path 2">
+          </div>
+          <div class="form-group">
+            <label for="txtHeadlinePadrao">Headline Padrão:</label>
+            <input type="text" required class="form-control" id="txtHeadlinePadrao" maxlength="30" placeholder="Headline Padrão">
+          </div>
+          <div class="form-group">
+            <label for="txtVariacaoUm">Variação 1:</label>
+            <input type="text" required class="form-control" id="txtVariacaoUm" maxlength="30" placeholder="Nome da variação">
+          </div>
+          <div class="form-group">
+            <label for="txtDescricaoUm">Descrição 1:</label>
+            <textarea maxlength="80" required class="form-control" id="txtDescricaoUm" placeholder="Digite a descrição"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="txtVariacaoDois">Variação 2:</label>
+            <input type="text" required class="form-control" id="txtVariacaoDois" maxlength="30" placeholder="Nome da variação">
+          </div>
+          <div class="form-group">
+            <label for="txtDescricaoDois">Descrição 2:</label>
+            <textarea maxlength="80" required class="form-control" id="txtDescricaoDois" placeholder="Digite a descrição"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="txtVariacaoTres">Variação 3:</label>
+            <input type="text" required class="form-control" id="txtVariacaoTres" maxlength="30" placeholder="Nome da variação">
+          </div>
+          <div class="form-group">
+            <label for="txtDescricaoTres">Descrição 3:</label>
+            <textarea maxlength="80" required class="form-control" id="txtDescricaoTres" placeholder="Digite a descrição"></textarea>
+          </div>
+          <button id="btnGerar" type="submit" class="btn btn-primary btn-block">Gerar</button>
+        </div>
+        <div class="col-lg-6 mx-auto">
+          <h2>Insira as palavras-chave</h2>
+          <textarea required id="txtDadosCampanha" name="txtDadosCampanha"></textarea>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <h2>Grupos de Anúncio:</h2>
+          <div class="form-group conteudoPlanilha">
+            <textarea id="txtGruposAnuncio" readonly></textarea> Total de Grupos de Anúncios
+            <span id="totalGrupoAnuncios" class="totalizadorItens">0</span>
+            <br /> Total de Palavras-chave
+            <span id="totalPalavrasChave" class="totalizadorItens">0</span>
+          </div>
+        </div>
+        <div class="col-lg-6 mx-auto">
+          <h2>Anúncios:</h2>
+          <div class="form-group conteudoPlanilha">
+            <textarea id="txtAnuncios" readonly></textarea> Total de Anúncios
+            <span id="totalAnuncios" class="totalizadorItens">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row divAction">
+        <div class="col-lg-12">
+          <a id="btnGerarArquivo" class="btn btn-primary btn-block">Gerar Arquivo</a>
+          <br />          
+          <a id="btnLimpar" class="btn btn-primary btn-block">Limpar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Powered by Lambda Marketing Digital</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/enums.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
