@@ -1,172 +1,915 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="robots" content="noindex" />
+    <meta charset="utf-8">
+    <title>Marlon Vidal | Especialista em Marketing Digital e Desenvolvedor Fullstack .NET</title>
+    <meta name="description" content="Profissional com mais de 8 anos de mercado com profundo conhecimento de tecnologia e marketing digital, ajudando empresas a conseguir melhorar os seus resultados e processos através das melhores ferramentas e metodologias do mercado">
+    <meta name="author" content="Marlon Vidal">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <script src="js/modernizr.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  <title>Gerador Adwords - Lambda Marketing Digital</title>
+        ga('create', 'UA-100720726-1', 'auto');
+        ga('send', 'pageview');
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-
+    </script>
+    <!--<link rel="shortcut icon" href="favicon.png">-->
 </head>
 
-<body id="page-top">
+<body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Gerador de Campanhas Adwords</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Informações</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Resultado</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li> -->
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <header id="home">
 
-  <section id="about">
-    <div class="container">
-      <form class="row">
-        <div class="col-lg-6 mx-auto">
-          <h2>Insira as informações</h2>
-          <div class="form-group">
-            <label for="txtNomeCliente">Nome do Cliente</label>
-            <input type="text" required class="form-control" id="txtNomeCliente" placeholder="Nome do Cliente">
-          </div>
-          <div class="form-group">
-            <label for="txtNomeCampanha">Nome da Campanha</label>
-            <input type="text" required class="form-control" id="txtNomeCampanha" placeholder="Nome da Campanha">
-          </div>
-          <div class="form-group">
-            <label for="txtPaginaDestino">Página de Destino</label>
-            <input type="text" required class="form-control" id="txtPaginaDestino" placeholder="Página de Destino">
-          </div>
-          <div class="form-group">
-            <label>URL Exibição</label>
-          </div>
-          <div class="form-inline">
-            <input type="text" required maxlength="15" class="form-control" id="txtPath1" placeholder="Path 1"> /
-            <input type="text" required maxlength="15" class="form-control" id="txtPath2" placeholder="Path 2">
-          </div>
-          <div class="form-group">
-            <label for="txtHeadlinePadrao">
-              Headline Padrão (Usar em todos os anúncios?)
-              <input type="radio" name="rdbHeadlinePadrao" id="rdbHeadlinePadraoNao" checked value="N" /> Não
-              <input type="radio" name="rdbHeadlinePadrao" id="rdbHeadlinePadraoSim" value="S" /> Sim
-            </label>
-            <input type="text" required class="form-control" id="txtHeadlinePadrao" maxlength="30" placeholder="Headline Padrão">
-          </div>
-          <div class="form-group">
-            <label for="txtVariacaoUm">Variação 1:</label>
-            <input type="text" required class="form-control" id="txtVariacaoUm" maxlength="30" placeholder="Nome da variação">
-          </div>
-          <div class="form-group">
-            <label for="txtDescricaoUm">Descrição 1:</label>
-            <textarea maxlength="80" required class="form-control" id="txtDescricaoUm" placeholder="Digite a descrição"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="txtVariacaoDois">Variação 2:</label>
-            <input type="text" required class="form-control" id="txtVariacaoDois" maxlength="30" placeholder="Nome da variação">
-          </div>
-          <div class="form-group">
-            <label for="txtDescricaoDois">Descrição 2:</label>
-            <textarea maxlength="80" required class="form-control" id="txtDescricaoDois" placeholder="Digite a descrição"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="txtVariacaoTres">Variação 3:</label>
-            <input type="text" required class="form-control" id="txtVariacaoTres" maxlength="30" placeholder="Nome da variação">
-          </div>
-          <div class="form-group">
-            <label for="txtDescricaoTres">Descrição 3:</label>
-            <textarea maxlength="80" required class="form-control" id="txtDescricaoTres" placeholder="Digite a descrição"></textarea>
-          </div>
-          <button id="btnGerar" type="submit" class="btn btn-primary btn-block">Gerar</button>
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Exibir menu">Exibir menu</a>
+            <a class="mobile-btn" href="#" title="Esconder menu">Esconder menu</a>
+
+            <ul id="nav" class="nav">
+                <li class="current">
+                    <a class="smoothscroll" href="#home">Início</a>
+                </li>
+                <li>
+                    <a class="smoothscroll" href="#about">Sobre mim</a>
+                </li>
+                <li>
+                    <a class="smoothscroll" href="#resume">Currículo</a>
+                </li>
+                <li>
+                    <a class="smoothscroll" href="#portfolio">Clientes</a>
+                </li>
+                <li>
+                    <a class="smoothscroll" href="#contact">Contato</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="row banner">
+            <div class="banner-text">
+                <h1 class="responsive-headline">Olá, eu sou o
+                    <br />Marlon Vidal</h1>
+                <h2 style="color: white;">
+                    Especialista em Marketing Digital
+                    <br /> e Desenvolvedor Fullstack .NET
+                </h2>
+                <h3>
+                    <span>
+                        Acredito no poder que as pessoas tem de se tornarem incríveis através da incansável busca pelo conhecimento, e tenho isso
+                        como base em minha vida para sempre me tornar uma pessoa melhor, seja na vida pessoal ou na vida
+                        profissional.
+                        <hr />
+                        <ul class="social">
+                            <li>
+                                <a href="https://www.github.com/marlonvidal">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/marlonvidal">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="callto://marlonvidalferreira?call">
+                                    <i class="fa fa-skype"></i>
+                                </a>
+                            </li>
+                        </ul>
+            </div>
         </div>
-        <div class="col-lg-6 mx-auto">
-          <h2>Insira as palavras-chave</h2>
-          <textarea required id="txtDadosCampanha" name="txtDadosCampanha"></textarea>
+
+        <p class="scrolldown">
+            <a class="smoothscroll" href="#about">
+                <i class="icon-down-circle"></i>
+            </a>
+        </p>
+
+    </header>
+
+    <section id="about">
+
+        <div class="row">
+
+            <div class="three columns">
+
+                <img class="profile-pic" src="images/profilepic.png" alt="" />
+
+            </div>
+
+            <div class="nine columns main-col">
+
+                <h2>Sobre mim</h2>
+
+                <p>
+                    Nascido e criado em Belo Horizonte, desde criança gosto e tenho facilidade em aprender coisas novas. Aprendi a lingua inglesa
+                    sozinho jogando videogame, era fã de um jogo de RPG onde eu tinha que entender o diálogo entre os personagens
+                    para saber o que deveria ser feito, e pra isso ficava com um dicionário ao meu lado traduzindo todas
+                    as conversas que aconteciam durante o jogo.
+                    <br/>
+                    <br/> Me formei no ensino médio aos 17 anos, porém já havia iniciado minha carreira profissional aos 16 anos
+                    de idade: fui o principal responsável pela atualização de projetos de SIG e da base de dados de logradouros
+                    públicos de cidades-polo do Nordeste do país, reportando diretamente à Telemar (muita responsabilidade
+                    para um jovem), através de tecnologias como Autocad, ArcGis e Microsoft Access (meu primeiro contato
+                    com linguagem SQL e linguagem de programação) .
+                    <br/>
+                    <br/> Aos 19 iniciei meu curso de Sistemas de Informação, e aos 20 ingressei no mercado de trabalho de TI.
+                    Me destaquei em um curso de desenvolvimento web utilizando .NET oferecido pela Stefanini, com uma vaga
+                    de estágio não remunerado por 3 meses para quem concluísse o curso e fosse aprovado.
+                    <br />
+                    <br/> Foi uma época financeiramente difícil, mas foi onde realmente aprendi as bases de desenvolvimento (li
+                    mais de 10 livros de 600 página sobre temas relacionados a desenvolvimento web) que me impulsionaram
+                    na minha carreira como desenvolvedor, sempre melhorando a qualidade e aglidade da minha entrega nos projetos
+                    que atuava.
+                    <br />
+                    <br/> Aos 23, comecei a participar de eventos de startup e entrei de vez no mundo do empreendedorismo. A partir
+                    daí, desenvolvi exponencialmente minhas habilidades em diversos segmentos, fundei duas startups, abri
+                    a minha empresa e realizo consultorias em várias áreas de conhecimento.
+                    <br />
+                    <br/> Depois de desenvolver o software para a minha startup, era hora de atrair pessoas para utilizar a solução.
+                    Mas como fazer isso? Foi daí que surgiu o meu interesse por marketing digital e a minha jornada para
+                    me tornar um especialista no tópico, aproveitando a bagagem de tecnologia que eu já dominava, tornou
+                    o processo muito mais natural e com resultados imediatos.
+                    <br />
+                    <br /> Por todos os lugares que passei, com todos os clientes que atendi e com todas as pessoas que trabalharam
+                    comigo, sou conhecido pelo bom humor, facilidade de relacionamento, disposição em ajudar, flexibilidade,
+                    comprometimento, competência e excelência no trabalho executado.
+                    <br />
+                    <br/> Está precisando de alguma coisa?
+                    <a class="smoothscroll" href="#contact">Vamos conversar</a>, tenho certeza que posso te ajudar :)
+                </p>
+
+            </div>
+
         </div>
-      </form>
-    </div>
-  </section>
 
-  <section id="services" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mx-auto">
-          <h2>Grupos de Anúncio:</h2>
-          <div class="form-group conteudoPlanilha">
-            <textarea id="txtGruposAnuncio" readonly></textarea> Total de Grupos de Anúncios
-            <span id="totalGrupoAnuncios" class="totalizadorItens">0</span>
-            <br /> Total de Palavras-chave
-            <span id="totalPalavrasChave" class="totalizadorItens">0</span>
-          </div>
+    </section>
+    <section id="resume">
+
+        <div class="row education">
+
+            <div class="four columns header-col">
+                <h1>
+                    <span>Formação</span>
+                </h1>
+            </div>
+
+            <div class="eight columns main-col">
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Sistemas de Informação</h3>
+                        <p class="info">Pontifícia Universidade Católica / Minas Gerais
+                            <span>&bull;</span>
+                            <em class="date">2011/2014</em>
+                        </p>
+
+                    </div>
+
+                </div>
+                <!-- item end -->
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Marketing digital | 1º Gama Bootcamp</h3>
+                        <p class="info">Gama Academy | Treinando profissionais para as startups do futuro
+                            <span>&bull;</span>
+                            <em class="date">maio/2016</em>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Certificação em Marketing de Conteúdo</h3>
+                        <p class="info">Rock Content
+                            <span>&bull;</span>
+                            <em class="date">2016</em>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Certificação em Google Adwords</h3>
+                        <p class="info">Google
+                            <span>&bull;</span>
+                            <em class="date">2017</em>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Certificação em Inbound Marketing</h3>
+                        <p class="info">Hubspot
+                            <span>&bull;</span>
+                            <em class="date">2016</em>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Certificação em Inbound Marketing</h3>
+                        <p class="info">Resultados Digitais
+                            <span>&bull;</span>
+                            <em class="date">2017</em>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Certificação em RD Station</h3>
+                        <p class="info">Resultados Digitais
+                            <span>&bull;</span>
+                            <em class="date">2017</em>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Certificação Agência de Sucesso | Marketing, Vendas, Gestão e Customer Success</h3>
+                        <p class="info">Resultados Digitais
+                            <span>&bull;</span>
+                            <em class="date">2017</em>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Especialista Microsoft MCP, MCTS, MCSD</h3>
+                        <p class="info">Possuo as seguintes certificações</p>
+                        <ul>
+                            <li>70-480 (HTML5, CSS3 & JS)</li>
+                            <li>70-486 (ASP.NET MVC 4)</li>
+                            <li>70-487 (Azure and Web Services)</li>
+                            <li>70-513 (WCF)</li>
+                            <li>70-516 (Data Access)</li>
+                            <li>70-515 (Web development .NET)</li>
+                            <li>70-519 (PRO Web Development .NET)</li>
+                            <li>70-595 (BizTalk Server 2010)</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="col-lg-6 mx-auto">
-          <h2>Anúncios:</h2>
-          <div class="form-group conteudoPlanilha">
-            <textarea id="txtAnuncios" readonly></textarea> Total de Anúncios
-            <span id="totalAnuncios" class="totalizadorItens">0</span>
-          </div>
+
+        <div class="row work">
+
+            <div class="four columns header-col">
+                <h1>
+                    <span>Experiência Profissional</span>
+                </h1>
+            </div>
+
+            <div class="eight columns main-col">
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>
+                            <a href="https://www.stefanini.com/br" target="_blank"> Stefanini IT Solutions</a>
+                        </h3>
+                        <p class="info">Estagiário
+                            <span>&bull;</span>
+                            <em class="date">julho/2010 - fevereiro/2011</em>
+                        </p>
+
+                        <p>
+                            Apoio no desenvolvimento de sistemas corporativos na plataforma .NET para um cliente internacional, com reuniões diárias
+                            conversando em inglês.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>
+                            <a href="http://www.bhs.com.br" target="_blank">BHS</a>
+                        </h3>
+                        <p class="info">Arquiteto de Software
+                            <span>&bull;</span>
+                            <em class="date">fevereiro/2011 - abril/2016</em>
+                        </p>
+
+                        <p>
+                            Alocação em clientes e responsável por arquitetura e desenvolvimento de sistemas web em ASP.NET e C# na plataforma .NET,
+                            frameworks 2.0, 3.5, 4.0 e 4.5, utilizando banco de dados SQL Server e desenvolvimento de relatórios
+                            gerenciais em SQL Server Report Services. Responsável pela arquitetura, desenvolvimento e integração
+                            de web services para sistemas orientados a serviço, também na plataforma .NET.
+                            <br /> Manutenção e desenvolvimento de sistemas arquitetados em MVC + EF/nHibernate, consumo de serviços
+                            em WCF/Web API e atuação em projeto de integração de sistemas heterogêneos utilizando a ferramenta
+                            EAI Microsoft Biztalk. Atuei em projetos que envolviam alta performance, criptografia ponta-a-ponta,
+                            paralelismo, rotinas que deveriam atuar em background do SO e globalização da plataforma (multi-linguagem).
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>
+                            <a href="http://www.2meet.com.br" target="_blank">
+                                2meet
+                            </a>
+                        </h3>
+                        <p class="info">Fundador/CEO
+                            <span>&bull;</span>
+                            <em class="date">fevereiro/2014 - junho/2016</em>
+                        </p>
+
+                        <p>
+                            Atuei no desenvolvimento da plataforma, baseado em .NET + SQL Server. Desenvolvimento do aplicativo utilizando Ionic Framework
+                            + Web API.
+                            <br /> Responsável pelo marketing, gerenciando o conteúdo em redes sociais e campanhas para aquisição
+                            e retenção de usuários.
+                            <br /> Responsável por fechar parcerias estratégicas, field sales e close-deals com bares parceiros
+                            da plataforma, que irão receber nossos usuários
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>
+                            <a href="https://www.facilinformatica.com.br" target="_blank">
+                                Fácil Informática
+                            </a>
+                        </h3>
+                        <p class="info">Desenvolvedor Sênior
+                            <span>&bull;</span>
+                            <em class="date">junho/2016 - novembro/2016</em>
+                        </p>
+
+                        <p>
+                            Participação em projeto de migração de sistema legado para nova arquitetura Web, com foco em reusabilidade e facilidade de
+                            manutenção em código.
+                            <br /> Tecnologias utilizadas: .NET Framework 4.5, ASP.NET MVC, WCF/ASMX, Oracle, Reporting Services,
+                            NHibernate. AutoFac, KnockoutJS
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>
+                            <a href="https://www.bancobonsucesso.com.br" target="_blank">
+                                Banco Bonsucesso
+                            </a>
+                        </h3>
+                        <p class="info">Líder técnico
+                            <span>&bull;</span>
+                            <em class="date">janeiro/2017 - setembro/2017</em>
+                        </p>
+
+                        <p>
+                            Responsável por coordenar equipes de desenvolvedores e analistas de sistemas a tomar decisões técnicas na concepção de soluções.
+                            <br /> Tecnologias utilizadas: .NET Framework 4.6, ASP.NET MVC, WCF/ASMX, WebAPI, Sql Server, Reporting
+                            Services, SSIS, Entity Framework
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>
+                            <a href="http://www.ditiz.com.br" target="_blank">
+                                Ditiz - Ecommerce Marketing
+                            </a>
+                        </h3>
+                        <p class="info">Fundador / CTO
+                            <span>&bull;</span>
+                            <em class="date">junho/2016 - setembro/2017</em>
+                        </p>
+
+                        <p>
+                            Reponsável pelo desenvolvimento completo do produto de marketing de referência, desde a concepção, entrega, manutenção, deploy
+                            e monitoramento, utilizando as tecnologias PHP (Laravel Framework), MySQL, AWS EC2, AWS RDS Linux,
+                            SendGrid e GitHub. Também atuei no marketing da empresa na produção de conteúdo, design gráfico
+                            e geração/nutrição de leads, utilizando as ferramentas Facebook Ads, Google Adwords, Google Analytics,
+                            SendGrid, Wordpress, entre outras.
+                            <br /> Responsável pela coordenação da equipe no atendimento dos clientes; planejamento e execução
+                            de campanhas de e-mail marketing, anuncios (Facebook Ads, Google Ads, Google Shopping, Criteo);
+                            Criação de blogs, landing pages e e-commerces; elaboração de estratégias para aumento de conversão
+                            e resultados de vendas dos nossos clientes.
+                            <br /> Startup acelerada pelo programa nacional do governo de fomento ao empreendedorismo Inovativa
+                            Brasil, no ano de 2016
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>
+                            <a href="http://lambdamarketingdigital.com.br" target="_blank">
+                                Lambda Marketing Digital
+                            </a>
+                        </h3>
+                        <p class="info">Fundador / Diretor
+                            <span>&bull;</span>
+                            <em class="date">setembro/2017 - Presente</em>
+                        </p>
+
+                        <p>
+                            Liderança de equipe e coordenador dos projetos de marketing digital para clientes de diversos segmentos, como e-commerces,
+                            empresas B2B, prestadores de serviços e profissionais autonômos.
+                            <br /> Gestão de campanhas de Adwords, Facebook Ads, Inbound Marketing, Produção de Conteúdo, RD Station,
+                            Automação de Marketing, Email Marketing, entre outros.
+                            <br /> Responsável pelo atendimento ao cliente e por realizar prospecções comerciais, participações
+                            em eventos e buscar parcerias estratégicas para o negócio.
+                            <br /> Eleito coordenador de crescimento da equipe BNI Premium BH, aplicando estratégias de marketing
+                            digital para aumentar a quantidade de membros do grupo, após destacar como Networker Notável.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>
+                            <a href="https://www.avenuecode.com" target="_blank">
+                                Avenue Code
+                            </a>
+                        </h3>
+                        <p class="info">Engenheiro de Software
+                            <span>&bull;</span>
+                            <em class="date">Agosto/2018 - Presente</em>
+                        </p>
+
+                        <p>
+                            Atuante em projetos de software de clientes internacionais da empresa.
+                            <br />Alocação on-site em San Mateo/CA, nos Estados Unidos, e atualmente trabalhando 
+                            com projetos utilizando Docker, Kubernetes, Google Cloud, .NET e .NET Core
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row divAction">
-        <div class="col-lg-12">
-          <a id="btnGerarArquivo" class="btn btn-primary btn-block">Gerar Arquivo</a>
-          <br />          
-          <a id="btnLimpar" class="btn btn-primary btn-block">Limpar</a>
+
+        <div class="row skill">
+
+            <div class="four columns header-col">
+                <h1>
+                    <span>Habilidades</span>
+                </h1>
+            </div>
+
+            <div class="eight columns main-col">
+
+                <p>
+                    Sou um profissional multidisciplinar, meu campo de atuação é bastante extenso. Possuo conhecimentos em desenvolvimento de
+                    software, infraestutura de TI, liderança, marketing digital, vendas, startups, produtividade, e-commerces,
+                    empreendedorismo, administração e design gráfico.
+                </p>
+
+
+                <div class="six columns header-col skills">
+                    <ul>
+                        <li>
+                            <strong>Desenvolvimento</strong>
+                        </li>
+                        <li>C#/ASP.NET</li>
+                        <li>Web Forms/MVC</li>
+                        <li>PHP/Laravel</li>
+                        <li>HTML/CSS/Javascript/jQuery</li>
+                        <li>MVC/MVVM/SPA</li>
+                        <li>KnockoutJS/VueJS</li>
+                        <li>WCF/Web API</li>
+                        <li>REST/SOA</li>
+                        <li>DDD/TDD/CQRS</li>
+                        <li>Design Patterns (IoC, DI, etc...)</li>
+                        <li>NuGET/NPM</li>
+                        <li>TFS/GitHub/Bitbucket</li>
+                        <li>Vagrant</li>
+                        <li>nHibernate/Entity Framework</li>
+                        <li>SQL Server/Oracle/MySQL</li>
+                        <li>SSIS/Reporting Services</li>
+                        <li>Windows/Linux (CentOS/Ubuntu)</li>
+                        <li>IIS/Apache</li>
+                        <li>Azure/AWS</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Docker/Vagrant</li>
+                        <li>Kubernetes</li>
+                        <li>NodeJS</li>
+                        <li>Windows Services/Cronjobs</li>
+                    </ul>
+                </div>
+                <div class="six columns header-col skills">
+                    <ul>
+                        <li>
+                            <strong>Marketing</strong>
+                        </li>
+                        <li>SEO</li>
+                        <li>Social Media</li>
+                        <li>Email Marketing</li>
+                        <li>RD Station</li>
+                        <li>HubSpot</li>
+                        <li>Automação de Marketing</li>
+                        <li>Inbound Marketing</li>
+                        <li>Inside Sales</li>
+                        <li>Marketing de conteúdo</li>
+                        <li>Google Analytics</li>
+                        <li>Google Search Console</li>
+                        <li>Google Merchant Center</li>
+                        <li>Facebook/Instagram Ads</li>
+                        <li>Mailchimp</li>
+                        <li>Google Adwords</li>
+                        <li>Otimização de conversão (CRO)</li>
+                        <li>E-commerce Marketing</li>
+                        <li>Wordpress</li>
+                        <li>Photoshop</li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Powered by Lambda Marketing Digital</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+    </section>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <section id="portfolio">
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <div class="row">
 
-  <!-- Custom JavaScript for this theme -->
-  <script src="js/scrolling-nav.js"></script>
-  <script src="js/util.js"></script>
-  <script src="js/enums.js"></script>
-  <script src="js/classes.js"></script>
-  <script src="js/functions.js"></script>
-  <script src="js/scripts.js"></script>
+            <div class="twelve columns collapsed">
 
+                <h1>Alguns clientes/projetos</h1>
+
+                <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+                    <div class="columns portfolio-item">
+                        <div class="item-wrap">
+
+                            <a href="#modal-01" title="">
+                                <img alt="" src="images/portfolio/brasil-cowboy.jpg">
+                                <div class="overlay">
+                                    <div class="portfolio-item-meta">
+                                        <h5>Brasil Cowboy</h5>
+                                        <p>Customização de Software</p>
+                                    </div>
+                                </div>
+                                <div class="link-icon">
+                                    <i class="icon-plus"></i>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="columns portfolio-item">
+                        <div class="item-wrap">
+
+                            <a href="#modal-02" title="">
+                                <img alt="" src="images/portfolio/aliabrand.jpg">
+                                <div class="overlay">
+                                    <div class="portfolio-item-meta">
+                                        <h5>Aliá Brand</h5>
+                                        <p>Estratégia de Crescimento de Marketing Digital</p>
+                                    </div>
+                                </div>
+                                <div class="link-icon">
+                                    <i class="icon-plus"></i>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="columns portfolio-item">
+                        <div class="item-wrap">
+
+                            <a href="#modal-03" title="">
+                                <img alt="" src="images/portfolio/autosoft.jpg">
+                                <div class="overlay">
+                                    <div class="portfolio-item-meta">
+                                        <h5>Autosoft</h5>
+                                        <p>Desenvolvimento de Software</p>
+                                    </div>
+                                </div>
+                                <div class="link-icon">
+                                    <i class="icon-plus"></i>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="columns portfolio-item">
+                        <div class="item-wrap">
+
+                            <a href="#modal-04" title="">
+                                <img alt="" src="images/portfolio/2meet.jpg">
+                                <div class="overlay">
+                                    <div class="portfolio-item-meta">
+                                        <h5>2meet</h5>
+                                        <p>Startup</p>
+                                    </div>
+                                </div>
+                                <div class="link-icon">
+                                    <i class="icon-plus"></i>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="modal-01" class="popup-modal mfp-hide">
+
+                <img class="scale-with-grid" src="images/portfolio/modals/m-brasil-cowboy.jpg" alt="" />
+
+                <div class="description-box">
+                    <h4>Brasil Cowboy</h4>
+                    <p>Customização do software de marketing de referência da Ditiz para campanha promocional realizada pela
+                        loja, visando o aumento das vendas através de indicação de amigos..</p>
+                    <span class="categories">
+                        <i class="fa fa-tag"></i>Desenvolvimento</span>
+                </div>
+
+                <div class="link-box">
+                    <a href="http://app.euvouparabarretos.com.br" target="_blank">Veja a promoção</a>
+                    <a class="popup-modal-dismiss">Fechar</a>
+                </div>
+
+            </div>
+
+            <div id="modal-02" class="popup-modal mfp-hide">
+
+                <img class="scale-with-grid" src="images/portfolio/modals/m-aliabrand.jpg" alt="" />
+
+                <div class="description-box">
+                    <h4>Aliá Brand</h4>
+                    <p>Desenvolvimento e migração da nova loja de e-commerce, com foco em crescimento das vendas através de
+                        e-mail marketing, integração com marketplaces e campanhas segmentadas de anúncios (Google/Facebook).</p>
+                    <span class="categories">
+                        <i class="fa fa-tag"></i>Marketing/E-commerce</span>
+                </div>
+
+                <div class="link-box">
+                    <a href="https://www.aliabrand.com.br" target="_blank">Visite a loja</a>
+                    <a class="popup-modal-dismiss">Fechar</a>
+                </div>
+
+            </div>
+
+            <div id="modal-03" class="popup-modal mfp-hide">
+
+                <img class="scale-with-grid" src="images/portfolio/modals/m-autosoft.jpg" alt="" />
+
+                <div class="description-box">
+                    <h4>AutoSoft</h4>
+                    <p>Sistema web de gestão de oficinas mecânicas com foco em usabilidade e facilidade. Construída com uma
+                        arquitetura moderna de software para ser hospedado em servidores Cloud (Em construção) </p>
+                    <span class="categories">
+                        <i class="fa fa-tag"></i>Branding</span>
+                </div>
+
+                <div class="link-box">
+                    <a href="https://github.com/marlonvidal/autosoft" target="_blank">Visite o repositório</a>
+                    <a class="popup-modal-dismiss">Fechar</a>
+                </div>
+
+            </div>
+
+            <div id="modal-04" class="popup-modal mfp-hide">
+
+                <img class="scale-with-grid" src="images/portfolio/modals/m-2meet.jpg" alt="" />
+
+                <div class="description-box">
+                    <h4>2meet</h4>
+                    <p>Realização de encontros entre duplas de amigos que tem interesse em comum, para se conhecerem pessoalmente
+                        em uma mesa de bar. (Projeto descontinuado)</p>
+                    <span class="categories">
+                        <i class="fa fa-tag"></i>Desenvolvimento/Marketing</span>
+                </div>
+
+                <div class="link-box">
+                    <a href="https://www.facebook.com/2meetoficial" target="_blank">Visite a Fan Page</a>
+                    <a class="popup-modal-dismiss">Fechar</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <div class="row section-head">
+
+            <div class="two columns header-col">
+
+                <h1>
+                    <span>Vamos conversar</span>
+                </h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                <p class="lead">
+                    Quer conversar sobre sua carreira, realizar um projeto pessoal ou tirar sua idéia do papel? Me mande uma mensagem, tenho
+                    certeza que vamos alcançar seus objetivos juntos ;)
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <form action="" method="post" id="contactForm" name="contactForm">
+                    <fieldset>
+
+                        <div>
+                            <label for="contactName">Nome
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" value="" size="35" id="contactName" name="contactName">
+                        </div>
+
+                        <div>
+                            <label for="contactEmail">Email
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                        </div>
+
+                        <div>
+                            <label for="contactSubject">Assunto</label>
+                            <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                        </div>
+
+                        <div>
+                            <label for="contactMessage">Mensagem
+                                <span class="required">*</span>
+                            </label>
+                            <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                        </div>
+
+                        <div>
+                            <button class="submit">Enviar</button>
+                            <span id="image-loader">
+                                <img alt="" src="images/loader.gif">
+                            </span>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+                <div id="message-warning"> Error boy</div>
+                <div id="message-success">
+                    <i class="fa fa-check"></i>Sua mensagem foi enviada, em breve retorno o contato :)
+                    <br>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <ul class="social-links">
+                    <li>
+                        <a href="https://www.github.com/marlonvidal">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/marlonvidal">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="callto://marlonvidalferreira?call">
+                            <i class="fa fa-skype"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="go-top">
+                <a class="smoothscroll" title="Voltar ao topo" href="#home">
+                    <i class="icon-up-open"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/magnific-popup.js"></script>
+    <script src="js/init.js"></script>
 </body>
-
 </html>
